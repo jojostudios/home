@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JoJo STUDiO</title>
+<link rel="stylesheet" href="css/jojo_swag.css">
+
+<script>
+function contactUs(){
+	document.getElementById('inquiries_container').classList.remove('appear');
+	document.getElementById('BLACKOUT').classList.remove('appear');
+	document.getElementById('main').classList.add('appear');
+}
+function closeThis(div){
+	document.getElementById(div).classList.add('appear');
+	document.getElementById('BLACKOUT').classList.add('appear');
+	document.getElementById('main').classList.remove('appear');
+}
+</script>
+
+</head>
+<body>
+<div class="wrapper">
+  <header class="header">
+  	<ul class="flex-container">
+    	<li class="flex-item icon" id="about">&there4;</li>
+      	<li class="flex-item icon" id="inquiries" onclick="contactUs();">&#9993;</li>
+    </ul>
+  </header>
+  <article class="main" id="main">
+  		<img src="img/jojo_attempt_2.png" id="JojoLogo"> 
+  </article>
+  <article class="inquiries_container appear" id="inquiries_container">
+  		<div class="close" onclick="closeThis('inquiries_container');">CLOSE</div>
+  		<img src="img/TextBubble0.jpg" id="inquiries_image">
+        <div class="contact_form">
+        	<label>Name: <input type="text" class="short_input"></label><br />
+            <label>Email: <input type="email" class="short_input"></label><br />
+            <p>&nbsp;</p>
+            <label>
+            	<textarea id="message"></textarea>
+            </label>
+        </div>
+  </article>
+  
+  <aside class="aside aside-1"></aside>
+  <aside class="aside aside-2"></aside>
+  <footer class="footer"></footer>
+</div>
+<div id="BLACKOUT" class="appear"></div>
+</body>
+
+
+
+</html>
+

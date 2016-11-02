@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JoJo STUDiO</title>
+<style>
+@import "compass/css3";
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-between;
+  align-items:center;
+}
+.flex-item {
+  /*background: tomato;*/
+  padding: 5px;
+  width: 100px;
+  height: 20px;
+  margin-top: 5px;
+  color: black;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+}
+
+.footer {
+  /*background: lightgreen;*/
+}
+
+.main {
+  text-align: center;
+  width:75%;
+}
+
+.aside-1 {
+  /*background: gold;*/
+}
+
+.aside-2 {
+  /*background: hotpink;*/
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+body {
+  padding: 2em; 
+}
+#JojoLogo {
+	width:100%;
+	padding-top:20px;
+}
+.inquiries {
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:50px;
+	cursor:pointer;
+}
+</style>
+
+<script>
+function toggle(){
+	var x = document.getElementById('.about-toggle');
+	if (x.style.display === 'none'){
+		x.style.display = 'block';
+	} else {
+		x.style.display = 'none';
+		}
+}
+</script>
+
+</head>
+
+
+
+<body>
+<div class="wrapper">
+  <header class="header">
+  	<ul class="flex-container">
+    	<li class="flex-item inquiries" id="about">&there4;</li>
+      	<li class="flex-item inquiries" id="inquiries" onclick="toggle">&#9993;</li>
+    </ul>
+  </header>
+  <article class="main">
+    <img src="jojo_attempt_2.png" id="JojoLogo"> 
+  </article>
+  <aside class="aside aside-1"></aside>
+  <aside class="aside aside-2"></aside>
+  <footer class="footer">
+  <div class="about-toggle">
+  a full service studio for everyone 
+ </div>
+ </footer>
+</div>
+</body>
+
+
+
+</html>
